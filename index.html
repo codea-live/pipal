@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PiPal</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" defer></script>
+
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mt-5">Realtime</h2>
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4">
+        <div class="card card-body">
+          <strong>CPU Usage</strong>
+          <span id="cpu"></span>
+          <span class="text-muted"> %</span>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4">
+        <div class="card card-body">
+          <strong>Memory</strong>
+          <span id="memory"></span>
+          <span class="text-muted"> / <span id="maxMemory">16 GB</span></span>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4">
+        <div class="card card-body">
+          <strong>Storage</strong>
+          <span id="storage"></span>
+          <span class="text-muted"> / <span id="maxMemory">1 TB</span></span>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4">
+        <div class="card card-body">
+          <strong>Temp</strong>
+          <span id="temp"></span>
+          <span class="text-muted"> °C</span>
+        </div>
+      </div>
+    </div>
+  
+    <h2 class="text-center mt-5">History</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h5 class="text-center">CPU</h5>
+        <div id="cpuGraph"></div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h5 class="text-center">Memory</h5>
+        <div id="memoryGraph"></div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h5 class="text-center">Storage</h5>
+        <div id="storageGraph"></div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <h5 class="text-center">Temp</h5>
+        <div id="tempGraph"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center mt-3">
+    <span>
+      <strong>Last Updated:</strong>
+      <span id="time"></span>
+    </span>
+  </footer>
+</body>
+</html>
