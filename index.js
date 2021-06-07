@@ -23,9 +23,20 @@ $(async () => {
     const columnData = rows.flatMap(r => +r[index]);
     console.log(columnData);
 
+    console.log(Chartist);
+
     new Chartist.Line(`#${header}Graph`,
       { labels: times, series: [columnData] },
-      { fullWidth: true, chartPadding: { right: 40 }, showArea: true },
+      {
+        low: 0,
+        high: 100,
+        fullWidth: true,
+        chartPadding: { right: 40 },
+        showArea: true,
+      },
+      {
+        plugins: [ tooltip() ]
+      }
     );      
   }
   
