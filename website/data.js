@@ -10,7 +10,7 @@ $(async () => {
 
     rows = arrays
       .filter(isMultiple)
-      .slice(0, maxLabels);
+      .slice(-maxLabels);
 
     for (const header of headers) {
       const index = headers.indexOf(header);
