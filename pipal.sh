@@ -12,7 +12,7 @@ LONG_TEMP=$(cat /sys/class/thermal/thermal_zone*/temp)
 TEMP=$(expr $LONG_TEMP / 1000)
 
 DATE_TIME=$(date +"%D %T")
-LOG_PATH="$DIR_NAME/log.csv"
+LOG_PATH="$DIR_NAME/website/log.csv"
 
 if [ ! -s $LOG_PATH ]; then
   echo time,cpu,memory,storage,temp > $LOG_PATH

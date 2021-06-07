@@ -1,8 +1,6 @@
 $(async () => {
   function loadTheme() {
-    const defaultTheme = 'DARK'
-    themeSelect.value = localStorage.getItem('theme') ?? defaultTheme;
-
+    themeSelect.value = localStorage.getItem('theme') ?? 'DARK';
     changeTheme();
   }
   function changeTheme() {

@@ -9,16 +9,22 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css">
-
+  
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" defer></script>
-  <script src="https://unpkg.com/chartist-plugin-tooltips@0.0.17" defer></script>
 
   <script src="data.js" defer></script>
   <script src="theme.js" defer></script>
 </head>
 <body class="background-primary font">
+  <nav class="navbar">
+    <div class="container pt-3">
+      <h1 href="#">PiPal</h1>
+      <p class="lead float-right">Pi's best friend.</p>
+    </div>
+  </nav>
+
   <div class="container">
     <h2 class="text-center primary mt-5 pt-5">Stats</h2>
     <div class="row">
@@ -77,30 +83,31 @@
     </div>
   </div>
 
-  <hr>
-  <footer class="mx-3 mt-3 d-flex justify-content-between">
-    <span>
-      <strong>Last Updated:</strong>
-      <span id="time"></span>
-    </span>
-
-    <span>
-      <label for="themeSelect"></label>
-      <select name="themeSelect" id="themeSelect" class="form-control">
-        <option value="DARK" selected>Dark</option>
-        <option value="LIGHT">Light</option>
-      </select>
-    </span>
-
-    <span>
-      <label for="timeScale"></label>
-      <select name="timeScale" id="timeScale" class="form-control">
-        <option value="1">15 Mins</option>
-        <option value="5" selected>1 Hour</option>
-        <option value="60">1 Day</option>
-        <option value="1440">1 Month</option>
-      </select>
-    </span>
-  </footer>
+  <div class="container py-4">
+    <footer class="row">
+      <div class="col-md-8">
+        <strong>Last Updated:</strong>
+        <span id="time"></span>
+      </div>
+  
+      <div class="col-md-2">
+        <label for="themeSelect">Theme</label>
+        <select name="themeSelect" id="themeSelect" class="form-control">
+          <option value="DARK" selected>Dark</option>
+          <option value="LIGHT">Light</option>
+        </select>
+      </div>
+  
+      <div class="col-md-2">
+        <label for="timeScale">Time Scale</label>
+        <select name="timeScale" id="timeScale" class="form-control">
+          <option value="1">15 Mins</option>
+          <option value="5" selected>1 Hour</option>
+          <option value="60">1 Day</option>
+          <option value="1440">1 Month</option>
+        </select>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
