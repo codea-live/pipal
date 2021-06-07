@@ -40,7 +40,8 @@ $(async () => {
         chartPadding: { right: 40 },
         showArea: true,
       },
-    );      
+      { plugins: [ Chartist.plugins.tooltip() ] }
+    );
   }
 
   timeScale.oninput = updateData;

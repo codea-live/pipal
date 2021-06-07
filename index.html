@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="LIGHT">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,59 +13,65 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" defer></script>
+  <script src="https://unpkg.com/chartist-plugin-tooltips@0.0.17" defer></script>
 
-  <script src="index.js" defer></script>
+  <script src="data.js" defer></script>
+  <script src="theme.js" defer></script>
 </head>
-<body>
+<body class="background-primary font">
   <div class="container">
-    <h2 class="text-center mt-5 pt-5">Realtime</h2>
+    <h2 class="text-center primary mt-5 pt-5">Stats</h2>
     <div class="row">
       <div class="col-md-3 col-sm-4">
-        <div class="card card-body">
-          <strong>CPU Usage</strong>
-          <span id="cpu"></span>
-          <span class="text-muted"> %</span>
+        <div class="card card-body background-secondary">
+          <strong class="secondary">CPU Usage</strong>
+          <span>
+            <span id="cpu" class="font"></span><span class="tertiary">%</span>
+          </span>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="card card-body">
-          <strong>Memory</strong>
-          <span id="memory"></span>
-          <span class="text-muted"> %</span>
+        <div class="card card-body background-secondary">
+          <strong class="secondary">Memory Usage</strong>
+          <span>
+            <span id="memory" class="font"></span><span class="tertiary">%</span>
+          </span>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="card card-body">
-          <strong>Storage</strong>
-          <span id="storage"></span>
-          <span class="text-muted"> %</span>
+        <div class="card card-body background-secondary">
+          <strong class="secondary">Storage</strong>
+          <span>
+            <span id="storage" class="font"></span><span class="tertiary">%</span>
+          </span>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="card card-body">
-          <strong>Temp</strong>
-          <span id="temp"></span>
-          <span class="text-muted"> °C</span>
+        <div class="card card-body background-secondary">
+          <strong class="secondary">Temperature</strong>
+          <span>
+            <span id="temp" class="font"></span><span class="tertiary">°C</span>
+          </span>
         </div>
       </div>
     </div>
   
-    <h2 class="text-center mt-5">History</h2>
+    <h2 class="text-center mt-5 primary">History</h2>
     <div class="row">
       <div class="col-md-6 col-sm-12">
-        <h5 class="text-center">CPU (%)</h5>
+        <h5 class="text-center secondary">CPU (%)</h5>
         <div id="cpuGraph"></div>
       </div>
       <div class="col-md-6 col-sm-12">
-        <h5 class="text-center">Memory (%)</h5>
+        <h5 class="text-center secondary">Memory (%)</h5>
         <div id="memoryGraph"></div>
       </div>
       <div class="col-md-6 col-sm-12">
-        <h5 class="text-center">Storage (%)</h5>
+        <h5 class="text-center secondary">Storage (%)</h5>
         <div id="storageGraph"></div>
       </div>
       <div class="col-md-6 col-sm-12">
-        <h5 class="text-center">Temp (°C)</h5>
+        <h5 class="text-center secondary">Temp (°C)</h5>
         <div id="tempGraph"></div>
       </div>
     </div>
@@ -76,6 +82,14 @@
     <span>
       <strong>Last Updated:</strong>
       <span id="time"></span>
+    </span>
+
+    <span>
+      <label for="themeSelect"></label>
+      <select name="themeSelect" id="themeSelect" class="form-control">
+        <option value="DARK" selected>Dark</option>
+        <option value="LIGHT">Light</option>
+      </select>
     </span>
 
     <span>

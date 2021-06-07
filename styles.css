@@ -1,9 +1,62 @@
-:root {
-  /* color theme here */
+:root[theme=LIGHT] {
+  --background-primary: #FDF0ED;
+  --background-secondary: #FADAD1;
+  --background-tertiary: #F9CBBE;
+
+  --primary: #DA103F;
+  --secondary: #1D8991;
+  --tertiary: #8931B9;
+
+  --font: #1A1C23;
+}
+:root[theme=DARK] {
+  --background-primary: #1C1E26;
+  --background-secondary: #1A1C23;
+  --background-tertiary: #16161C;
+
+  --primary: #E95678;
+  --secondary: #25B2BC;
+  --tertiary: #B877DB;
+
+  --font: #FDF0ED;
 }
 
+/* override */
 img {
   width: 90%;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.ct-label {
+  color: var(--tertiary) !important;
+}
+.ct-series-a .ct-bar,
+.ct-series-a .ct-line,
+.ct-series-a .ct-point,
+.ct-series-a .ct-slice-donut {
+  stroke: var(--tertiary);
+}
+
+/* util */
+.background-primary {
+  background: var(--background-primary) !important;
+}
+.background-secondary {
+  background: var(--background-secondary) !important;
+}
+.background-tertiary {
+  background: var(--background-tertiary) !important;
+}
+.primary {
+  color: var(--primary) !important;
+}
+.secondary {
+  color: var(--secondary) !important;
+}
+.tertiary {
+  color: var(--tertiary) !important;
+}
+.font {
+  color: var(--font) !important;
 }
