@@ -17,28 +17,75 @@
     </div>
   </nav>
 
-  <section class="container">
+  <section class="container mt-5">
     <h2>Stats</h2>
     <div class="row">
-      <div class="col-3">1</div>
-      <div class="col-3">2</div>
-      <div class="col-3">3</div>
-      <div class="col-3">4</div>
+      <div class="col-3">
+        <div class="card card-body">
+          <strong>CPU Usage</strong>
+          <span>
+            <span id="cpu"></span>
+            <span>%</span>
+          </span>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card card-body">
+          <strong>Memory Usage</strong>
+          <span>
+            <span id="memory"></span>
+            <span>%</span>
+          </span>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card card-body">
+          <strong>Storage Usage</strong>
+          <span>
+            <span id="storage"></span>
+            <span>%</span>
+          </span>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card card-body">
+          <strong>Temperature</strong>
+          <span>
+            <span id="temp"></span>
+            <span>°C</span>
+          </span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="container">
+  <section class="container mt-5">
     <h2>History</h2>
     <div class="row">
-      <div class="col-6">a</div>
-      <div class="col-6">b</div>
-      <div class="col-6">c</div>
-      <div class="col-6">d</div>
+      <div class="col-6">
+        <h5>CPU Usage (%)</h5>
+        <div id="cpuGraph"></div>
+      </div>
+      <div class="col-6">
+        <h5>Memory Usage (%)</h5>
+        <div id="memoryGraph"></div>
+      </div>
+      <div class="col-6">
+        <h5>Storage Usage (%)</h5>
+        <div id="storageGraph"></div>
+      </div>
+      <div class="col-6">
+        <h5>Temperature (°C)</h5>
+        <div id="tempGraph"></div>
+      </div>
     </div>
   </section>
 
-  <footer class="container">
-    Footer
+  <footer class="container py-4">
+    <span>
+      <strong>Last Updated: </strong>
+      <span id="time"></span>
+    </span>
   </footer>
 </body>
 </html>
