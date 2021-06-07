@@ -13,7 +13,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.11/jquery.csv.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-tooltip/0.0.11/chartist-plugin-tooltip.min.js"></script>
 
   <script src="index.js" defer></script>
 </head>
@@ -21,28 +20,28 @@
   <div class="container">
     <h2 class="text-center mt-5 pt-5">Realtime</h2>
     <div class="row">
-      <div class="col-lg-2 col-md-3 col-sm-4">
+      <div class="col-md-3 col-sm-4">
         <div class="card card-body">
           <strong>CPU Usage</strong>
           <span id="cpu"></span>
           <span class="text-muted"> %</span>
         </div>
       </div>
-      <div class="col-lg-2 col-md-3 col-sm-4">
+      <div class="col-md-3 col-sm-4">
         <div class="card card-body">
           <strong>Memory</strong>
           <span id="memory"></span>
           <span class="text-muted"> %</span>
         </div>
       </div>
-      <div class="col-lg-2 col-md-3 col-sm-4">
+      <div class="col-md-3 col-sm-4">
         <div class="card card-body">
           <strong>Storage</strong>
           <span id="storage"></span>
           <span class="text-muted"> %</span>
         </div>
       </div>
-      <div class="col-lg-2 col-md-3 col-sm-4">
+      <div class="col-md-3 col-sm-4">
         <div class="card card-body">
           <strong>Temp</strong>
           <span id="temp"></span>
@@ -53,29 +52,40 @@
   
     <h2 class="text-center mt-5">History</h2>
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12">
         <h5 class="text-center">CPU (%)</h5>
         <div id="cpuGraph"></div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12">
         <h5 class="text-center">Memory (%)</h5>
         <div id="memoryGraph"></div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12">
         <h5 class="text-center">Storage (%)</h5>
         <div id="storageGraph"></div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12">
         <h5 class="text-center">Temp (°C)</h5>
         <div id="tempGraph"></div>
       </div>
     </div>
   </div>
 
-  <footer class="text-center mt-3">
+  <hr>
+  <footer class="mx-3 mt-3 d-flex justify-content-between">
     <span>
       <strong>Last Updated:</strong>
       <span id="time"></span>
+    </span>
+
+    <span>
+      <label for="timeScale"></label>
+      <select name="timeScale" id="timeScale" class="form-control">
+        <option value="1">15 Mins</option>
+        <option value="5" selected>1 Hour</option>
+        <option value="60">1 Day</option>
+        <option value="1440">1 Month</option>
+      </select>
     </span>
   </footer>
 </body>

@@ -9,12 +9,11 @@ STORAGE=$(df -h --total | grep total | awk '{print $5}' | sed -e 's/[%]//g')
 LONG_TEMP=$(cat /sys/class/thermal/thermal_zone*/temp)
 TEMP=$(expr $LONG_TEMP / 1000)
 
-DATE=$(date -I)
-TIME=$(date +%H:%M)
-LOG_PATH="$DIR_NAME/log/$DATE.csv"
+DATE_TIME=$(date +"%D %T")
+LOG_PATH="$DIR_NAME/log.csv"
 
 if [ ! -s $LOG_PATH ]; then
   echo time,cpu,memory,storage,temp > $LOG_PATH
 fi
 
-echo $TIME,$CPU,$MEMORY,$STORAGE,$TEMP >> $LOG_PATH
+echo $DATE_TIME,$CPU,$MEMORY,$STORAGE,$TEMP >> $LOG_PATH
