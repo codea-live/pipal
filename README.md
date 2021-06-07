@@ -1,4 +1,4 @@
 # PiPal
 Pi's best friend.
 
-> Coming soon in a Raspberry Pi course.
+> Coming soon to a Raspberry Pi course.
