@@ -23,8 +23,8 @@ $(async () => {
     const el = document.querySelector(`#${name}`);
     el.textContent = rows[row][column];
   
-    const times = rows.flatMap(r => r[0]);
-    const columnData = rows.flatMap(r => Number(r[column]));
+    const times = rows.map(r => r[0].slice(-8, -3));
+    const columnData = rows.map(r => Number(r[column]));
   
     new Chartist.Line(`#${name}Graph`, {
       labels: times,
