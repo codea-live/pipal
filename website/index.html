@@ -88,10 +88,21 @@
   </section>
 
   <footer class="container py-4">
-    <span>
-      <strong>Last Updated: </strong>
-      <span id="time"></span>
-    </span>
+    <div class="row">
+      <div class="col-md-8">
+        <strong>Last Updated: </strong>
+        <span id="time"></span>
+      </div>
+  
+      <div class="col-md-2">
+        <select class="form-control" name="timeScale" id="timeScale">
+          <option value="1">12 Mins</option>
+          <option value="5" selected>1 Hour</option>
+          <option value="120">1 Day</option>
+          <option value="1440">1 Month</option>
+        </select>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -1,9 +1,11 @@
 $(async () => {
+  timeScale.value = localStorage.getItem('timeScale');
+
   let rows = $.csv.toArrays(await getCSV());
   const headers = rows.splice(0, 1)[0];
 
   const maxLabels = 12;
-  const isMultiple = (_, index) => index % maxLabels === 0;
+  const isMultiple = (_, index) => index % timeScale.value === 0;
 
   rows = rows
     .filter(isMultiple)
@@ -30,5 +32,10 @@ $(async () => {
       labels: times,
       series: [columnData],
     });
+  }
+
+  timeScale.oninput = () => {
+    localStorage.setItem('timeScale', timeScale.value);
+    location.reload();
   }
 });
