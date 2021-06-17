@@ -1,5 +1,5 @@
 $(async () => {
-  timeScale.value = localStorage.getItem('timeScale');
+  timeScale.value = localStorage.getItem('timeScale') || 1440;
 
   let rows = $.csv.toArrays(await getCSV());
   const headers = rows.splice(0, 1)[0];
