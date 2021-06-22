@@ -14,4 +14,6 @@ if [ ! -s $LOG_PATH ]; then
   echo time,cpu,memory,storage,temp >> $LOG_PATH
 fi
 
+sh clean.sh
+
 echo $TIME,$CPU,$MEMORY,$STORAGE,$TEMP >> $LOG_PATH
