@@ -7,7 +7,13 @@
   <title>PiPal - Pi's Best Friend</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css">
   <link rel="stylesheet" href="styles.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" defer></script>
+  <script src="data.js" defer></script>
 </head>
 <body>
   <nav class="navbar">
@@ -82,10 +88,20 @@
   </section>
 
   <footer class="container py-4">
-    <span>
-      <strong>Last Updated: </strong>
-      <span id="time"></span>
-    </span>
+    <div class="row">
+      <div class="col-md-8">
+        <strong>Last Updated: </strong>
+        <span id="time"></span>
+      </div>
+      <div class="col-md-2">
+        <select id="timeScale">
+          <option value="1">12 Minutes</option>
+          <option value="5" selected>1 Hour</option>
+          <option value="120">1 Day</option>
+          <option value="3600">1 Month</option>
+        </select>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
