@@ -1,0 +1,55 @@
+:root[theme=LIGHT] {
+  --background-primary: #FDF0ED;
+  --background-secondary: #FADAD1;
+  --background-tertiary: #F9CBBE;
+
+  --primary: #DA103F;
+  --secondary: #1D8991;
+  --tertiary: #F9CBBE;
+
+  --font: #1A1C23;
+}
+:root,
+:root[theme=DARK] {
+  --background-primary: #1C1E26;
+  --background-secondary: #1A1C23;
+  --background-tertiary: #16161C;
+
+  --primary: #E95678;
+  --secondary: #25B2BC;
+  --tertiary: #B877DB;
+
+  --font: #FDF0ED;  
+}
+
+/* charts */
+.ct-label {
+  color: var(--tertiary) !important;
+}
+.ct-series-a * {
+  stroke: var(--tertiary) !important;
+}
+
+/* util */
+.background-primary {
+  background-color: var(--background-primary) !important;
+}
+.background-secondary {
+  background-color: var(--background-secondary) !important;
+}
+.background-tertiary {
+  background-color: var(--background-tertiary) !important;
+}
+
+.primary {
+  color: var(--primary) !important;
+}
+.secondary {
+  color: var(--secondary) !important;
+}
+.tertiary {
+  color: var(--tertiary) !important;
+}
+.font {
+  color: var(--font) !important;
+}
