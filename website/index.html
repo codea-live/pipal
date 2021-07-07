@@ -15,6 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" defer></script>
   <script src="data.js" defer></script>
+  <script src="theme/theme.js" defer></script>
 </head>
 <body class="background-primary font">
   <nav class="navbar">
@@ -100,6 +101,12 @@
           <option value="5" selected>1 Hour</option>
           <option value="120">1 Day</option>
           <option value="3600">1 Month</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <select class="form-control background-tertiary font border-0" id="themeSelect">
+          <option value="LIGHT">Light</option>
+          <option value="DARK" selected>Dark</option>
         </select>
       </div>
     </div>
