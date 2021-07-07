@@ -24,10 +24,10 @@
 
 /* charts */
 .ct-label {
-  color: var(--tertiary) !important;
+  color: var(--secondary) !important;
 }
 .ct-series-a * {
-  stroke: var(--tertiary) !important;
+  stroke: var(--secondary) !important;
 }
 
 /* util */
