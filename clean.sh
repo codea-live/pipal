@@ -1,3 +1,6 @@
+#!/bin/bash
+cd $(dirname $0)
+
 LOG_PATH="website/log.csv"
 MAX_LOGS="43200"
 LOG_COUNT=$(cat $LOG_PATH | wc -l | xargs -i expr {} - 1)

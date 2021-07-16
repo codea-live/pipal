@@ -1,3 +1,6 @@
+#!/bin/bash
+cd $(dirname $0)
+
 INTERVAL_MINS=1
 LOG_JOB="*/$INTERVAL_MINS * * * * sh $(pwd)/pipal.sh"
 START_JOB="@reboot sh $(pwd)/serve.sh"
